@@ -1,0 +1,43 @@
+table .btn{
+  padding: 1px 5px 1px;
+  margin-top: 10px;
+  margin-right: -3px;
+}
+.input-micro {
+  width: 20px;
+}
+
+.table tr > td:last-child {
+	font-weight: bold;
+}
+
+.table tbody td.success {
+  background-color: #dff0d8 !important;
+}
+
+.table tbody td.error {
+  background-color: #f2dede !important;
+}
+
+.table tbody td.warning {
+  background-color: #fcf8e3 !important;
+}
+
+.table tfoot th.info {
+  background-color: #d9edf7 !important;
+}
+.table tfoot th.success {
+  background-color: #dff0d8 !important;
+}
+
+.table tfoot th.error {
+  background-color: #f2dede !important;
+}
+
+.table tfoot th.warning {
+  background-color: #fcf8e3 !important;
+}
+
+.table tfoot th.info {
+  background-color: #d9edf7 !important;
+}

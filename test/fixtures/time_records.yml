@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hours: 1
+  date: 1
+  task_id: 1
+
+two:
+  hours: 1
+  date: 1
+  task_id: 1

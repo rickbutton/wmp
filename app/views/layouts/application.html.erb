@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>TimeTracker - <%= yield :title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= yield :extra_css %>
+
+  <%= javascript_include_tag "application" %>
+  <%= yield :extra_js %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+			<%= render 'shared/nav' %>
+		</div>
+	</div>
+<% unless yield(:no_container) == true %>
+<div class="container">
+<% end %>
+	<%= yield :extra_header %>
+	<%= render 'shared/notifications' %>
+	<%= yield %>
+	<div class="row">
+	<div class="span12">
+	<hr>
+	<footer>
+    <p>Team: 404 - Team Name Not Found</p>
+  </footer>
+	</div>
+  </div>
+<% unless yield(:no_container) == true %>
+</div>
+<% end %>
+</body>
+</html>

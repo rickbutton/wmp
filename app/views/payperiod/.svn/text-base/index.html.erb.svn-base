@@ -1,0 +1,126 @@
+<% title 'Pay Periods '%>
+<% content_for :extra_js do %>
+<%= javascript_include_tag('payperiod/payperiod') %>
+<%= javascript_include_tag('payperiod/jquery.editables-1.0.0') %>
+<%= javascript_include_tag('jquery.validate.min') %>
+<%= javascript_include_tag('payperiod/jquery.dataTables.editable') %>
+<%= javascript_include_tag('//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/jquery.dataTables.min.js')%>
+<% end %>
+<% content_for :extra_css do %>
+<%= stylesheet_link_tag('//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/css/jquery.dataTables.css')%>
+<% end %>
+<style>
+.table table-no-select {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.table-centered
+{
+  margin: auto !important;
+  float: none !important;
+}
+
+</style>
+<%= tag("div", :id => "time_data", :data => {:year => @year, 
+																						 :month => @month, 
+																						 :period => @period, 
+																						 :readonly => @read_only, 
+																						 :numdays => @day_range.to_a.length,
+																						 :clients => @client_hash
+																					
+																						
+																						 }) %>
+</div>
+<% content_for :extra_header do %>
+<div class="row">
+<div class="hero-unit">
+	<h3>Time Card - Pay Period #<%= @period %><%= " (Read Only)" if @read_only %></h3>
+	<h4><%= Date.new(@year, @month, @day_range.begin).strftime('%B %d, %Y') %> - <%= Date.new(@year, @month, @day_range.end).strftime('%B %d, %Y') %></h4>
+</div>
+</div>
+<% end %>
+<div class="row">
+<div class="span6">
+	<% unless @client_hash.empty? %>
+	<a id="add-project-button" style="margin-left: -20px" role="button" class="btn btn-success" data-toggle="modal" href="#add-project-modal">Add Project</a>
+	<% end %>
+</div>
+<div class="span6">
+	<form class="form-inline pull-right">
+		<select id="year-select" class="span2">
+			<% (2012..2015).each do |year| %>
+			<option value="<%= year %>"><%= year %></option>
+			<% end %>
+		</select>
+		<select id="month-select" class="span2">
+			<% (1..12).each do |month| %>
+			<option value="<%= month %>"><%= Date::MONTHNAMES[month] %></option>
+			<% end %>
+		</select>
+	<div class="btn-group" data-toggle="buttons-radio">
+		<button id="period-one-button" type="button" class="btn btn-primary <%= " active" if @period == 1 %>">Period 1</button>
+		<button id="period-two-button" type="button" class="btn btn-primary <%= " active" if @period == 2 %>">Period 2</button>
+	</div>
+	</form>
+</div>
+</div>
+<div class="row">
+<table id="payperiod" class="table table-bordered table-striped table-no-select table-hover" onselectstart='return false;'>
+	<thead>
+      <tr>
+				<th>ID</th>
+        <th>Client</th>
+        <th>Project</th>
+        <th>Task</th>
+        <% @day_range.each do |day| %>
+				<th><%= day %></th>
+				<% end %>
+        <th>Total</th>
+      </tr>
+  </thead>
+    <tbody>
+    <tfoot>
+		<tr>
+      <th colspan="4">Total</th>
+      <% @day_range.each do |day| %>
+			<th>0</th>
+			<% end %>
+			<th>0</th>
+  	 </tr>
+    </tfoot>
+    </tbody>
+  </table>
+</table>
+</div>
+
+<div class="modal hide fade" id="add-project-modal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Add Project to Time Card</h3>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal">
+			<div class="control-group">
+				<label class="control-label" for="client">Client</label>
+				<div class="controls">
+					<select id="client-select">
+						<% @client_hash.each do |id, hash| %>
+						<option value="<%= id %>"><%= hash[:name] %></option>
+						<% end %>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="project">Project</label>
+				<div class="controls">
+					<select id="project-select" name="project">
+					</select>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-success" id="add-project-submit">Add Project</button>
+	</div>
+</div>

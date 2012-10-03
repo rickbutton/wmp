@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/gfive/!svn/ver/1/test/fixtures
+END
+time_records.yml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gfive/!svn/ver/1/test/fixtures/time_records.yml
+END
+clients.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gfive/!svn/ver/1/test/fixtures/clients.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/gfive/!svn/ver/1/test/fixtures/users.yml
+END
+roles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/gfive/!svn/ver/1/test/fixtures/roles.yml
+END
+tasks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/gfive/!svn/ver/1/test/fixtures/tasks.yml
+END
+admin_users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gfive/!svn/ver/1/test/fixtures/admin_users.yml
+END
+projects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gfive/!svn/ver/1/test/fixtures/projects.yml
+END

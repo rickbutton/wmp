@@ -1,0 +1,61 @@
+<% title 'Reports' %>
+<% content_for :extra_header do %>
+<% content_for :extra_js do %>
+<%= javascript_include_tag('reports/reports') %>
+<% end %>
+<div class="row">
+<div class="hero-unit">
+	<h3>Reports</h3>
+</div>
+</div>
+<% end %>
+<%= tag("div", :id => "time_data", :data => {:year => @year, 
+																						 :month => @month, 
+																						 :period => @period
+																					
+																						
+																						 }) %>
+	<form class="form-inline">
+		<label class="control-label">Select Pay Period:</label>
+		<select id="year-select" class="span2">
+			<% (2012..2015).each do |year| %>
+			<option value="<%= year %>"><%= year %></option>
+			<% end %>
+		</select>
+		<select id="month-select" class="span2">
+			<% (1..12).each do |month| %>
+			<option value="<%= month %>"><%= Date::MONTHNAMES[month] %></option>
+			<% end %>
+		</select>
+	<div class="btn-group" data-toggle="buttons-radio">
+		<button id="period-one-button" type="button" class="btn btn-primary active">Period 1</button>
+		<button id="period-two-button" type="button" class="btn btn-primary">Period 2</button>
+	</div>
+</form>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#consultants" data-toggle="tab">Consultants</a></li>
+  <li><a href="#clients" data-toggle="tab">Clients</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="consultants">
+  	<select id="cons-select">
+			<% @users.each do |user| %>
+			<% unless user.role.admin%>
+			<option value="<%= user.id %>"><%= user.full_name%></option>
+			<% end %>
+			<% end %>
+		</select>
+		<button id="cons-button" class="btn btn-success">Run Report</button>
+  </div>
+  <div class="tab-pane" id="clients">
+  	<select id="clients-select">
+			<% @clients.each do |client| %>
+			<% unless client.name == "ADMIN_CLIENT" %>
+			<option value="<%= client.id %>"><%= client.name%></option>
+			<% end %>
+			<% end %>
+		</select>
+		<button id="clients-button" class="btn btn-success">Run Report</button>
+  </div>
+</div>

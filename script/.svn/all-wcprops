@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/gfive/!svn/ver/1/script
+END
+rails
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/gfive/!svn/ver/1/script/rails
+END
+filldb.rb
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/gfive/!svn/ver/1/script/filldb.rb
+END

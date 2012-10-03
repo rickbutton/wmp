@@ -1,0 +1,17 @@
+<a class="brand" href="<%= root_path %>">Time Tracker</a>
+<ul class="nav">
+	
+</ul>
+<ul class="nav pull-right">
+	<% if current_user %>
+	<li><%= link_to current_user.full_name, :edit_user_registration %></li>
+	<% if current_user.role.can_run_reports %>
+	<li><%= link_to_nav "Reports", :reports %></li>
+	<% end %>
+	<li><%= link_to_nav "Time Card", :root %></li>
+	<% if current_user.role.admin || current_user.role.can_setup %>
+	<li><%= link_to_nav "Admin", :admin_dashboard %>
+	<% end %>
+	<li><%= link_to_nav "Logout", :destroy_user_session %></li>
+	<% end %>
+</ul>

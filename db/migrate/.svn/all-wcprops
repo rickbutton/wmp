@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/gfive/!svn/ver/1/db/migrate
+END
+20120919234849_create_tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gfive/!svn/ver/1/db/migrate/20120919234849_create_tasks.rb
+END
+20120919234811_create_clients.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gfive/!svn/ver/1/db/migrate/20120919234811_create_clients.rb
+END
+20120919234903_create_time_records.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gfive/!svn/ver/1/db/migrate/20120919234903_create_time_records.rb
+END
+20120924232722_users_projects.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gfive/!svn/ver/1/db/migrate/20120924232722_users_projects.rb
+END
+20120925074342_add_first_and_last_names_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/gfive/!svn/ver/1/db/migrate/20120925074342_add_first_and_last_names_to_user.rb
+END
+20120919195346_move_admin_notes_to_comments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/gfive/!svn/ver/1/db/migrate/20120919195346_move_admin_notes_to_comments.rb
+END
+20120919195345_create_admin_notes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gfive/!svn/ver/1/db/migrate/20120919195345_create_admin_notes.rb
+END
+20120919231032_devise_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gfive/!svn/ver/1/db/migrate/20120919231032_devise_create_users.rb
+END
+20120919235343_devise_create_admin_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/gfive/!svn/ver/1/db/migrate/20120919235343_devise_create_admin_users.rb
+END
+20120919234821_create_projects.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gfive/!svn/ver/1/db/migrate/20120919234821_create_projects.rb
+END
+20120927231652_add_billable_to_client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/gfive/!svn/ver/1/db/migrate/20120927231652_add_billable_to_client.rb
+END
+20120919234757_create_roles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gfive/!svn/ver/1/db/migrate/20120919234757_create_roles.rb
+END

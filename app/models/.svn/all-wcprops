@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/gfive/!svn/ver/1/app/models
+END
+ability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/gfive/!svn/ver/1/app/models/ability.rb
+END
+client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/gfive/!svn/ver/1/app/models/client.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/gfive/!svn/ver/7/app/models/user.rb
+END
+role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/gfive/!svn/ver/1/app/models/role.rb
+END
+task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/gfive/!svn/ver/1/app/models/task.rb
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/gfive/!svn/ver/1/app/models/.gitkeep
+END
+admin_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gfive/!svn/ver/1/app/models/admin_user.rb
+END
+project.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/gfive/!svn/ver/1/app/models/project.rb
+END
+time_record.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gfive/!svn/ver/1/app/models/time_record.rb
+END
